@@ -25,7 +25,7 @@ async def home():
     
 def generate_grid():
     grid_size = 5
-    total_stars = 4 if random.randint(1, 5) != 5 else 5
+    total_stars = 6 if random.randint(1, 5) != 5 else 5
     grid = [["⬛" for _ in range(grid_size)] for _ in range(grid_size)]
     positions = random.sample(range(grid_size * grid_size), total_stars)
     for pos in positions:
@@ -52,7 +52,7 @@ async def send_signals():
             await asyncio.sleep(5)
             await bot.send_message(CHANNEL_ID, "👉 <i>Jouer avant 3min...</i> ✅")
             await asyncio.sleep(160)
-            await bot.send_message(CHANNEL_ID, random.choice(["✅✅✅ <i>BOOOOOOM</i> ✅✅✅💰", "✅✅✅ GREENNNNNN!!! ✅✅✅"]),
+            await bot.send_message(CHANNEL_ID, random.choice(["✅✅✅ <i>VALIDÉ....</i> ✅✅✅💰", "✅✅✅ GREENNNNNN!!! ✅✅✅"]),
                                    reply_to_message_id=signal_message.message_id)
             sticker_id = random.choice([
                 "CAACAgEAAxkBAAEPUVVou9rU2_6UHHrJ5HiuO4SEmPKPQwACLgYAApAfGEU5Y7UCSDN-aDYE",
