@@ -25,7 +25,7 @@ async def home():
     
 def generate_grid():
     grid_size = 5
-    total_stars = 6 if random.randint(1, 5) != 5 else 7
+    total_stars = 4 if random.randint(1, 5) != 5 else 5
     grid = [["⬛" for _ in range(grid_size)] for _ in range(grid_size)]
     positions = random.sample(range(grid_size * grid_size), total_stars)
     for pos in positions:
@@ -42,16 +42,15 @@ async def send_signals():
             grid = generate_grid()
             message = (
                 "💠 SIGNAL MINES\n"
-                "<i>Valide pendant 3min ......</i>\n"
-                "Piège : 3 💣\n\n"
+                "<i>Valide pendant 4 min ......</i>\n"
+                "Mines : 5 💣\n\n"
                 f"{grid}\n\n"
+                "⏰ Validity: 4 Minutes\n"
                 "👉 <a href=\"https://1wxjli.com/?open=register&p=8ocv\">Joue ici !</a>\n"
                 "❓ <a href=\"https://t.me/c/2183428707/285\">Comment jouer ?</a>"
             )
             signal_message = await bot.send_message(CHANNEL_ID, message)
-            await asyncio.sleep(5)
-            await bot.send_message(CHANNEL_ID, "👉 <i>Jouer avant 3min...</i> ✅")
-            await asyncio.sleep(160)
+            await asyncio.sleep(165)
             await bot.send_message(CHANNEL_ID,"✅✅✅ <i>VALIDÉ....</i> ✅✅✅💰",
                                    reply_to_message_id=signal_message.message_id)
             sticker_id = random.choice([
