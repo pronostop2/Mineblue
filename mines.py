@@ -25,12 +25,12 @@ async def home():
     
 def generate_grid():
     grid_size = 5
-    total_stars = 6 if random.randint(1, 5) != 5 else 5
+    total_stars = 6 if random.randint(1, 5) != 5 else 7
     grid = [["⬛" for _ in range(grid_size)] for _ in range(grid_size)]
     positions = random.sample(range(grid_size * grid_size), total_stars)
     for pos in positions:
         row, col = divmod(pos, grid_size)
-        grid[row][col] = "💠"
+        grid[row][col] = "💎"
     return "\n".join("".join(row) for row in grid)
 
 
@@ -45,7 +45,7 @@ async def send_signals():
                 "<i>Valide pendant 3min ......</i>\n"
                 "Piège : 3 💣\n\n"
                 f"{grid}\n\n"
-                "👉 <a href=\"https://1wyvrz.life/v3/2158/1win-mines?p=qn1x\">Joue ici !</a>\n"
+                "👉 <a href=\"https://1wxjli.com/?open=register&p=8ocv\">Joue ici !</a>\n"
                 "❓ <a href=\"https://t.me/c/2183428707/285\">Comment jouer ?</a>"
             )
             signal_message = await bot.send_message(CHANNEL_ID, message)
