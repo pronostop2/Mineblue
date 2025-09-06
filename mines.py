@@ -30,7 +30,7 @@ def generate_grid():
     positions = random.sample(range(grid_size * grid_size), total_stars)
     for pos in positions:
         row, col = divmod(pos, grid_size)
-        grid[row][col] = "💎"
+        grid[row][col] = "💠"
     return "\n".join("".join(row) for row in grid)
 
 
@@ -41,7 +41,7 @@ async def send_signals():
             await asyncio.sleep(random.randint(20, 30))
             grid = generate_grid()
             message = (
-                "✅ NOUVEAU SIGNAL\n"
+                "💠 SIGNAL MINES\n"
                 "<i>Valide pendant 3min ......</i>\n"
                 "Piège : 3 💣\n\n"
                 f"{grid}\n\n"
