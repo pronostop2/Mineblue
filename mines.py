@@ -55,9 +55,10 @@ async def send_signals():
             await bot.send_message(CHANNEL_ID, random.choice(["✅✅✅ <i>BOOOOOOM</i> ✅✅✅💰", "✅✅✅ GREENNNNNN!!! ✅✅✅"]),
                                    reply_to_message_id=signal_message.message_id)
             sticker_id = random.choice([
-                "CAACAgIAAxkBAAEN3jZnuDFrQjM9UFkluMKs_JNY9hgVaAACAwEAAladvQoC5dF4h-X6TzYE",
-                "CAACAgEAAxkBAAEN_fNnyTR9qijdQimoq2fC0Fo5ugxZWwAC_AADOA6CEUCO7Z9DKY4HNgQ",
-                "CAACAgIAAxkBAAEN7oVnxLG76xXfbQ6xfgIBX2zUiUxOvQACKQADWbv8JWiEdiw7SWZ7NgQ"
+                "CAACAgEAAxkBAAEPUVVou9rU2_6UHHrJ5HiuO4SEmPKPQwACLgYAApAfGEU5Y7UCSDN-aDYE",
+                "CAACAgEAAxkBAAEPUVdou9rXVnYmVr1XCOjwAAH1LjqHrIwAAsoEAAIUOhlFaMm1ueUnroE2BA",
+                "CAACAgIAAxkBAAEPUWNou95VmLsudbR13KHkl07BzJVPQQACdQ8AAh4V8UuN549XMF_AnzYE",
+                "CAACAgEAAxkBAAEPUVtou9rtqoWHnQHFGXJIbT60trfh5AACgAYAApEXGUX_cemgOUuieTYE"
             ])
             await bot.send_sticker(CHANNEL_ID, sticker_id)
             await asyncio.sleep(random.randint(2, 5))
