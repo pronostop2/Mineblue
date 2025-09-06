@@ -8,11 +8,7 @@ TOKEN = "7567457205:AAGkKhTseqlzRD08O_bpH6v574qzR3dmppw"
 CHANNEL_ID = "@mines1winpredictor"
 
 MESSAGES_TO_FORWARD = [
-    {"from_chat_id": "@mine1wgroup", "message_id": 285},
-    {"from_chat_id": "@mine1wgroup", "message_id": 599},
-    {"from_chat_id": "@mine1wgroup", "message_id": 1677},
-    {"from_chat_id": "@mine1wgroup", "message_id": 867},
-    {"from_chat_id": "@mine1wgroup", "message_id": 43035},
+    {"from_chat_id": "@mines1winpredictor", "message_id": 2},
 ]
 
 bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
