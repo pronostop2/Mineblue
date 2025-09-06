@@ -52,7 +52,7 @@ async def send_signals():
             await asyncio.sleep(5)
             await bot.send_message(CHANNEL_ID, "👉 <i>Jouer avant 3min...</i> ✅")
             await asyncio.sleep(160)
-            await bot.send_message(CHANNEL_ID, random.choice(["✅✅✅ <i>VALIDÉ....</i> ✅✅✅💰", "✅✅✅ GREENNNNNN!!! ✅✅✅"]),
+            await bot.send_message(CHANNEL_ID,"✅✅✅ <i>VALIDÉ....</i> ✅✅✅💰",
                                    reply_to_message_id=signal_message.message_id)
             sticker_id = random.choice([
                 "CAACAgEAAxkBAAEPUVVou9rU2_6UHHrJ5HiuO4SEmPKPQwACLgYAApAfGEU5Y7UCSDN-aDYE",
