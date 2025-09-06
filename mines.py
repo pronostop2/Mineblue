@@ -56,8 +56,7 @@ async def send_signals():
             sticker_id = random.choice([
                 "CAACAgEAAxkBAAEPUVVou9rU2_6UHHrJ5HiuO4SEmPKPQwACLgYAApAfGEU5Y7UCSDN-aDYE",
                 "CAACAgEAAxkBAAEPUVdou9rXVnYmVr1XCOjwAAH1LjqHrIwAAsoEAAIUOhlFaMm1ueUnroE2BA",
-                "CAACAgIAAxkBAAEPUWNou95VmLsudbR13KHkl07BzJVPQQACdQ8AAh4V8UuN549XMF_AnzYE",
-                "CAACAgEAAxkBAAEPUVtou9rtqoWHnQHFGXJIbT60trfh5AACgAYAApEXGUX_cemgOUuieTYE"
+                "CAACAgIAAxkBAAEPUWNou95VmLsudbR13KHkl07BzJVPQQACdQ8AAh4V8UuN549XMF_AnzYE"
             ])
             await bot.send_sticker(CHANNEL_ID, sticker_id)
             await asyncio.sleep(random.randint(2, 5))
