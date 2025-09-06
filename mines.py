@@ -26,7 +26,7 @@ async def home():
 def generate_grid():
     grid_size = 5
     total_stars = 4 if random.randint(1, 5) != 5 else 5
-    grid = [["⬛" for _ in range(grid_size)] for _ in range(grid_size)]
+    grid = [["🟦" for _ in range(grid_size)] for _ in range(grid_size)]
     positions = random.sample(range(grid_size * grid_size), total_stars)
     for pos in positions:
         row, col = divmod(pos, grid_size)
